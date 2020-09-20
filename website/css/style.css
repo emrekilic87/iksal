@@ -1,0 +1,107 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.listPage .bannerArea {
+  margin-bottom: 3em;
+}
+
+.listPage .bannerArea .img {
+  width: 100%;
+}
+
+.listPage .postArea .descArea {
+  display: flex;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #dedede;
+}
+
+.listPage .postArea .descArea:last-child {
+  border-bottom: none;
+}
+
+.listPage .postArea .descArea .imageArea {
+  width: 30%;
+  margin-right: 30px;
+}
+.listPage .postArea .descArea .textArea {
+  width: 70%;
+}
+.listPage .postArea .descArea .imageArea .img {
+  width: 100%;
+}
+.listPage .postArea .descArea .textArea .title {
+  margin: 0;
+  font-size:20px;
+}
+
+.listPage .postArea .descArea .textArea .text{
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.detailPage .container{
+  max-width: 700px;
+}
+
+.detailPage .imageArea{
+  text-align: center;
+}
+
+.detailPage .imageArea .img{
+  max-width: 100%;
+}
+
+.detailPage .title{
+  font-size: 24px;
+}
+
+.detailPage .descArea{
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.detailPage .socialArea .social{
+	font-size:20px;
+	margin-right: 7px;
+	color: #908e8e;
+}
+
+.socialArea{
+	margin-top: 1em;
+}
+
+.returnHome{
+  margin-top: 25px;
+  font-size: 13px;
+}
+
+.returnHome .leftArrow{
+  margin-right: 10px;
+}
+
+
+
+
+@media (max-width: 992px) {
+  .listPage .postArea .descArea {
+    display: block;
+  }
+  .listPage .postArea .descArea .imageArea,
+  .listPage .postArea .descArea .textArea {
+    width: 100%;
+  }
+}
