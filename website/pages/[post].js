@@ -14,9 +14,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const currentUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/${params.post}`;
-  const res = await fetch(currentUrl);
+  const postUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/${params.post}`;
+  const res = await fetch(postUrl);
   const post = await res.json();
+  const currentUrl = `${process.env.NEXT_PUBLIC_URL}/posts/${params.post}`
 
   const linkedinShare =
     "http://www.linkedin.com/shareArticle?mini=true&url=" +
