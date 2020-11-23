@@ -19,7 +19,7 @@ function HomePage({ data, bannersData }) {
           <img
             key={item.banner.hash}
             className="img"
-            src={`${process.env.NEXT_PUBLIC_API_URL}` + item.banner.url}
+            src={item.banner.url}
           ></img>
         ))}
       </section>
@@ -36,7 +36,7 @@ function HomePage({ data, bannersData }) {
                 <div className="imageArea">
                   <img
                     className="img"
-                    src={`${process.env.NEXT_PUBLIC_API_URL}` + item.banner.url}
+                    src={item.banner.url}
                   ></img>
                 </div>
                 <div className="textArea">

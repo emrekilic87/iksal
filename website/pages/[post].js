@@ -56,7 +56,7 @@ function PostPage({
           <div className="imageArea">
             <img
               className="img"
-              src={`${process.env.NEXT_PUBLIC_API_URL}` + post.banner.url}
+              src={post.banner.url}
             ></img>
           </div>
           <SocialArea
