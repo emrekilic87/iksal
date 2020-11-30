@@ -37,6 +37,7 @@ a {
 .listPage .postArea .descArea .imageArea {
   width: 30%;
   margin-right: 30px;
+  margin-bottom: 1em;
 }
 .listPage .postArea .descArea .textArea {
   width: 70%;
