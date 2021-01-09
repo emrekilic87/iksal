@@ -1,13 +1,16 @@
 import Link from "next/link";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
   const data = await res.json();
 
   const banners = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`);
   const bannersData = await banners.json();
 
-  return { props: { data, bannersData } };
+  return { 
+    props: { data, bannersData }, 
+    revalidate: 60 
+  };
 }
 
 function HomePage({ data, bannersData }) {
