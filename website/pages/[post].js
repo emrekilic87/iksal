@@ -36,6 +36,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { post, linkedinShare, facebookShare, twitterShare, envelopShare },
+    revalidate: 60
   };
 }
 
