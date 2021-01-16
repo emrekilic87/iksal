@@ -114,3 +114,5 @@ exports
 build
 
 .next
+.env
+.env-example

@@ -6,7 +6,7 @@ import GridLoader from "react-spinners/GridLoader";
 const loading = css`
   display: block;
   margin: 0 auto;
-   position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
