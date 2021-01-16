@@ -1,6 +1,18 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { css } from "@emotion/core";
+import GridLoader from "react-spinners/GridLoader";
+const loading = css`
+  display: block;
+  margin: 0 auto;
+   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+`;
 
 const SocialArea = dynamic(() => import("../components/socialArea"));
 
@@ -50,7 +62,7 @@ function PostPage({
 }) {
   const router = useRouter()
   if (router.isFallback) {
-    return <div>Loading...</div>
+    return <GridLoader color={'#D0021B'} css={loading} size={20} />
   }
   return (
     <div className="detailPage">
