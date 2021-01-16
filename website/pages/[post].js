@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 const SocialArea = dynamic(() => import("../components/socialArea"));
 
@@ -10,7 +11,7 @@ export async function getStaticPaths() {
     params: { post: post.id.toString() },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
@@ -47,6 +48,10 @@ function PostPage({
   twitterShare,
   envelopShare,
 }) {
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <div className="detailPage">
       <link
