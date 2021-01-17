@@ -16,7 +16,6 @@ export async function getStaticProps() {
 function HomePage({ data, bannersData }) {
   return (
     <div className="listPage">
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link>
       <section className="bannerArea">
         {bannersData.map((item) => (
           <img
