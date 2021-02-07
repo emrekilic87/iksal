@@ -1,6 +1,9 @@
-
-
-function SocialArea({linkedinShare, facebookShare, twitterShare, envelopShare}) {
+function SocialArea({
+  linkedinShare,
+  facebookShare,
+  twitterShare,
+  envelopShare,
+}) {
   return (
     <div className="socialArea">
       <a
@@ -10,7 +13,7 @@ function SocialArea({linkedinShare, facebookShare, twitterShare, envelopShare}) 
       ></a>
       <a
         className="social face icon-facebook"
-       href={`${facebookShare}`}
+        href={`${facebookShare}`}
         target="_blank"
       ></a>
       <a
@@ -18,10 +21,7 @@ function SocialArea({linkedinShare, facebookShare, twitterShare, envelopShare}) 
         href={`${twitterShare}`}
         target="_blank"
       ></a>
-      <a
-        className="social face icon-envelop"
-        href={`${envelopShare}`}
-      ></a>
+      <a className="social face icon-envelop" href={`${envelopShare}`}></a>
     </div>
   );
 }

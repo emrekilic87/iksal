@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { css } from "@emotion/core";
 import GridLoader from "react-spinners/GridLoader";
 const loading = css`
@@ -23,14 +23,14 @@ export async function getStaticPaths() {
     params: { post: post.id.toString() },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
   const postUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/${params.post}`;
   const res = await fetch(postUrl);
   const post = await res.json();
-  const currentUrl = `${process.env.NEXT_PUBLIC_URL}/${params.post}`
+  const currentUrl = `${process.env.NEXT_PUBLIC_URL}/${params.post}`;
 
   const linkedinShare =
     "http://www.linkedin.com/shareArticle?mini=true&url=" +
@@ -49,7 +49,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { post, linkedinShare, facebookShare, twitterShare, envelopShare },
-    revalidate: 60
+    revalidate: 60,
   };
 }
 
@@ -60,9 +60,9 @@ function PostPage({
   twitterShare,
   envelopShare,
 }) {
-  const router = useRouter()
+  const router = useRouter();
   if (router.isFallback) {
-    return <GridLoader color={'#D0021B'} css={loading} size={20} />
+    return <GridLoader color={"#D0021B"} css={loading} size={20} />;
   }
   return (
     <div className="detailPage">
@@ -73,10 +73,7 @@ function PostPage({
       <section className="postArea">
         <div className="container">
           <div className="imageArea">
-            <img
-              className="img"
-              src={post.banner.url}
-            ></img>
+            <img className="img" src={post.banner.url}></img>
           </div>
           <SocialArea
             linkedinShare={linkedinShare}

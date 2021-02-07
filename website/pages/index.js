@@ -31,8 +31,7 @@ function HomePage({ data, bannersData }) {
           {data.map((item) => (
             <Link
               key={item.id.toString()}
-              href="/[id]"
-              as={`/${item.id.toString()}`}
+              href={`/${item.id.toString()}`}
             >
               <a className="descArea">
                 <div className="imageArea">
@@ -50,9 +49,6 @@ function HomePage({ data, bannersData }) {
           ))}
         </div>
       </section>
-
-     
-
     </div>
   );
 }

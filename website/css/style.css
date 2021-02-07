@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   background-color: #9e9e9e24;
 }
 a {
@@ -47,56 +47,53 @@ a {
 }
 .listPage .postArea .descArea .textArea .title {
   margin: 0;
-  font-size:20px;
+  font-size: 20px;
 }
 
-.listPage .postArea .descArea .textArea .text{
+.listPage .postArea .descArea .textArea .text {
   font-size: 16px;
   line-height: 22px;
 }
 
-.detailPage .container{
+.detailPage .container {
   max-width: 700px;
 }
 
-.detailPage .imageArea{
+.detailPage .imageArea {
   text-align: center;
 }
 
-.detailPage .imageArea .img{
+.detailPage .imageArea .img {
   max-width: 100%;
 }
 
-.detailPage .title{
+.detailPage .title {
   font-size: 24px;
 }
 
-.detailPage .descArea{
+.detailPage .descArea {
   font-size: 18px;
   line-height: 32px;
 }
 
-.detailPage .socialArea .social{
-	font-size:20px;
-	margin-right: 7px;
-	color: #908e8e;
+.detailPage .socialArea .social {
+  font-size: 20px;
+  margin-right: 7px;
+  color: #908e8e;
 }
 
-.socialArea{
-	margin-top: 1em;
+.socialArea {
+  margin-top: 1em;
 }
 
-.returnHome{
+.returnHome {
   margin-top: 25px;
   font-size: 13px;
 }
 
-.returnHome .leftArrow{
+.returnHome .leftArrow {
   margin-right: 10px;
 }
-
-
-
 
 @media (max-width: 992px) {
   .listPage .postArea .descArea {
