@@ -8,4 +8,4 @@ Tech stacks;
 * Cloudinary Platform (for image host)
 * Vercel (Deployment Platform)
 <br>
-Demo: https://iksal.net/
+Demo: https://iksal-emrekilic87.vercel.app/
